@@ -101,7 +101,7 @@ describe("Guardian.GSU-1", () => {
   });
 
   it("CRITICAL: Swaps are not part of withdrawal gas estimation", async () => {
-    // Exagerate single swap gas limit to showcase it is not being included in execution feeestimation
+    // Exaggerate single swap gas limit to showcase it is not being included in execution fee estimation
     await dataStore.setUint(keys.singleSwapGasLimitKey(), decimalToFloat(10_000_000));
     await dataStore.setUint(keys.withdrawalGasLimitKey(false), 10_000);
     await dataStore.setUint(keys.ESTIMATED_GAS_FEE_MULTIPLIER_FACTOR, expandDecimals(1, 30));
