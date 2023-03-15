@@ -100,7 +100,7 @@ describe("Guardian.OCL-1", () => {
     });
   });
 
-  it("MEDIUM: Max Oracle Block Numbers Can be Unsorted", async () => {
+  it("LOW: Max Oracle Block Numbers Can be Unsorted", async () => {
     await createOrder(fixture, {
       account: user0,
       market: ethUsdMarket,
