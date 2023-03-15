@@ -27,7 +27,7 @@ import { claimableCollateralAmountKey } from "../../../utils/keys";
 import { createWithdrawal, executeWithdrawal, handleWithdrawal, getWithdrawalCount } from "../../../utils/withdrawal";
 import { hashData, hashString, encodeData } from "../../../utils/hash";
 
-describe("Guardian.GLOBAL_10", () => {
+describe("Guardian.GLOBAL-10", () => {
   const { provider } = ethers;
 
   let fixture;
