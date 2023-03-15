@@ -190,8 +190,7 @@ describe("Guardian.MKTU-4", () => {
       "967683200000000000000000000000000000000000000000000000000000000"
     );
 
-    // OVERFLOW PANIC CODE in getPoolValue when performing applyFactor with the BORROWING_FEE_RECEIVER_FACTOR
-    // since the value (first parameter) is 60 decimals instead of 30.
+    // OVERFLOW PANIC CODE since poolValue (60 decimals) is multiplied by WEI_PRECISION
     await expect(getMarketTokenPrice(fixture, {})).to.be.revertedWithPanic("0x11");
 
     const marketTokensBefore = await getBalanceOf(ethUsdMarket.marketToken, user0.address);
